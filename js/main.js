@@ -131,6 +131,21 @@ var maximize = function() {
     $("#maxi").attr("onclick", "unmaximize()");
 };
 
+
+//==========================
+// RANDOMIZE FUNCTIONALITY  |
+//==========================
+
+function getRandomInt(min, max){
+    return Math.floor(Math.random() * (max - min)) + min;
+}
+
+var random = function() {
+    games = $(".clicky");
+    mygame = games[getRandomInt(0,games.length)]
+    window.location = mygame.href
+}
+
 //==========================
 // MINIMIZE FUNCTIONALITY   |
 //==========================
